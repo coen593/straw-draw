@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    View draw
+{% endblock %}
+
+{% block main %}
+    <h3>Please enter the code linked to your draw and your email address</h3>
+    <form action="/manage" method="get"> 
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" maxlength="25" required="" name="code" placeholder="Draw code" type="text">
+        </div>
+        <div class="form-group">
+            <input class="form-control" autofocus name="mail" required="" placeholder="Your email" type="email">
+        </div>
+        <button class="btn" type="submit">Submit!</button>
+    </form>    
+    
+{% endblock %}

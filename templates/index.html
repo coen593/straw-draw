@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+     settle who does what!
+{% endblock %}
+
+{% block main %}
+    <h3>Decide who does your errant. <br><span class="blue">Wherever</span> you are.</h3>
+    {% if session.user_id %}
+        <p><a href="/other">
+            <button class="mainButton">Another draw</button>
+        </a></p>
+    {% else %}
+        <p><a href="/create">
+            <button class="mainButton">Create a new draw</button>
+        </a></p>
+        <p><a href="/participate">
+            <button class="mainButton">Participate in a draw</button>
+        </a></p>
+    {% endif %}
+    <p><a href="/manage">
+        <button class="mainButton">Manage your draw</button>
+    </a></p>
+    
+{% endblock %}

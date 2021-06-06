@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+     the draw has been settled!
+{% endblock %}
+
+{% block main %}
+    <h3>The straws have been drawn for <br>
+        <span class="blue">{{ draw }}</span>!</h3>
+    {% if straws == 1 %}
+        <h2><span class="green">{{ winners[0][0] }}</span> drew the shortest straw.</h2>
+    {% else %}
+        <h4>Check out who drew the shortest straws below.</h4>
+        <table class="table">
+            <span class="green">
+                {% for winner in winners%}
+                    <tr>
+                        <td><h2>{{ winner[0] }}</h2></td>
+                    </tr>
+                {% endfor %}
+            </span>
+        </table>    
+    {% endif %}
+{% endblock %}

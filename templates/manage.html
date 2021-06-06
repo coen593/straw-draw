@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Manage {{ draw }}
+{% endblock %}
+
+{% block main %}
+    <h3>{{ draw }}</h3>
+    <p>organised by {{ cname }}</p>
+    <br>
+    <h3>Draw code: {{ code }}</h3>
+    <button id="clipboardCopy">Copy URL to share</button>
+    <script>
+        document.getElementById('clipboardCopy').addEventListener('click', clipboardCopy);
+        async function clipboardCopy() {
+            let text = "{{ request.url_root }}participate?code={{ code }}";
+            await navigator.clipboard.writeText(text);
+        }
+    </script>
+    <br><br>
+    {% if iscreator %}
+        <table class="table">
+            <tr>
+                <th class="nameCol">Participants</th>
+                <th>Delete?</th>
+            </tr>
+            {% for participant in participants%}
+                <tr>
+                    <td>{{ participant[0] }}</td>
+                    <td><form action="/delete" method="post">
+                        <input type="hidden" id="participant" name="participant" value="{{ participant[0] }}">
+                        <input type="hidden" id="number" name="number" value="{{ participant[1] }}">
+                        <input type="hidden" id="code" name="code" value="{{ code }}">
+                        <input type="image" src="/static/DeleteCross.png" class="delete" border="0" alt="Submit" />
+                    </form></td>
+                </tr>
+            {% endfor %}
+        </table>
+        <form action="manage" method="post">
+            <button class="btn" type="submit" name="trigger">DRAW</button>
+        </form>
+    {% else %}
+        <table class="table">
+            <tr>
+                <th>Participants</th>
+            </tr>
+            {% for participant in participants%}
+                <tr>
+                    <td>{{ participant[0] }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+        <p>The draw can only be triggered by its organiser {{ cname }}</p>
+    {% endif %}
+    
+{% endblock %}

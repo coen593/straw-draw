@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Participate in {{ draw }}
+{% endblock %}
+
+{% block main %}
+    <p>{{ cname }} has invited you to take part in the following draw:</p>
+    <h4><span class="green">{{ draw }}</span></h4>
+    <p>Please enter your name and email address below and participate!</p>
+    <form action="/participate" method="post">
+        <p>   
+            Your name:
+            <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" maxlength="25" required="" name="name" placeholder="Your name" type="text">
+            </div>
+        </p>
+        <p>
+            Email:
+            <div class="form-group">
+                <input class="form-control" autofocus name="mail" required="" placeholder="Your email" type="email">
+            </div>
+        </p>
+        <input type="hidden" id="code" name="code" value="{{ code }}">
+        <button class="btn" type="submit">Participate in the draw!</button>
+    </form>
+    
+    
+{% endblock %}

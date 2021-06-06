@@ -1,0 +1,186 @@
+nav .navbar-brand
+{
+    /* size for brand */
+    font-size: xx-large;
+}
+
+/* set text colors */
+.blue
+{
+    color: #537fbe;
+}
+.green
+{
+    color: #2e944b;
+}
+
+/* Colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+nav .navbar-brand .red
+{
+    color: #ea433b;
+}
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+nav .navbar-brand .green
+{
+    color: #2e944b;
+}
+nav .navbar-brand .fuchsia
+{
+    color: #bd0d82;
+}
+
+/* settings for index buttons */
+.mainButton
+{
+    background-color: rgb(60, 119, 196);
+    color: white;
+    font-size: 4vh;
+    width: 50vw;
+    height: 15vh;
+    border-radius: 10px;
+    font: tahoma;
+    border-collapse: separate;
+    border-spacing: 50px;
+    margin: 10px;    
+}
+
+.mainButton:hover
+{
+    background-color: rgb(32, 55, 85);
+    font-weight: bold;
+    width: 55vw;
+    height: 16.5vh;
+}
+
+main .form-control
+{
+    /* Center form controls */
+    display: inline-block;
+
+    /* Override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+main
+{
+    /* Scroll horizontally as needed */
+    overflow-x: auto;
+
+    /* Center contents */
+    text-align: center;
+}
+
+main img
+{
+    /* Constrain images on small screens */
+    max-width: 100%;
+}
+
+
+span {cursor:pointer; }
+.number{
+    margin:10px;
+}
+
+.delete{
+    height:20px;
+    width:20px;
+}
+
+.btn
+{
+    background-color: rgb(60, 119, 196);
+    color: white;
+    font-size: 2.6vh;
+    width: 26vw;
+    height: 10vh;
+    border-radius: 10px;
+    font: tahoma;
+    border-collapse: separate;
+    border-spacing: 50px;
+    margin: 10px;    
+}
+#clipboardCopy
+{
+    background-color: rgb(60, 119, 196);
+    color: white;
+    font-size: 2.6vh;
+    width: 13vw;
+    height: 5vh;
+    border-radius: 10px;
+    font: tahoma;
+    border-collapse: separate;
+    border-spacing: 50px;
+    margin: 10px;   
+}
+
+.btn:hover
+{
+    background-color: rgb(32, 55, 85);
+    font-weight: bold;
+    width: 28.6vw;
+    height: 11vh;
+    color: white;
+}
+#clipboardCopy:hover
+{
+    background-color: rgb(32, 55, 85);
+    font-weight: bold;
+    width: 14.3vw;
+    height: 6.5vh;
+    color: white;
+}
+
+.minus, .plus
+{
+    width:30px;
+    height:30px;
+    background:#f2f2f2;
+    border-radius:2px;
+    border:1px solid #ddd;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.minus:hover, .plus:hover
+{
+    background:#fafafa;
+}
+
+input
+{
+    height:34px;
+    width: 100px;
+    text-align: center;
+    font-size: 26px;
+    border:1px solid #ddd;
+    border-radius:4px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* ordered list (how does it work page) */
+ol
+{
+    text-align: left;
+}
+
+.table
+{
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nameCol
+{
+    width: 75%
+}

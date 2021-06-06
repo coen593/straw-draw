@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+     Set up your draw
+{% endblock %}
+
+{% block main %}
+    <h3><span class="blue">Create your draw</span></h3>
+    <form action="/create" method="post">
+        <p>   
+            Personal details:
+            <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" maxlength="25" required="" name="creator" placeholder="Your name" type="text">
+            </div>
+            <div class="form-group">
+                <input class="form-control" autofocus name="mail" required="" placeholder="Your email" type="email">
+            </div>
+        </p>
+        <p>
+            Number of short straws:
+            <div class="number">
+                <span class="minus">-</span>
+                <input type="text" name="straws" value="1"/>
+                <span class="plus">+</span>
+            </div>
+        </p>
+        <p>   
+            Give your draw a name!:
+            <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" maxlength="25" required="" name="draw" placeholder="Draw name" type="text">
+            </div>
+        </p>
+        <button class="btn" type="submit">Create draw!</button>
+    </form>
+    
+{% endblock %}

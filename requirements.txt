@@ -1,0 +1,8 @@
+Flask
+Flask-Session
+Flask-Mail
+sqlite3
+werkzeug
+tempfile
+datetime
+random

@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Participate in a draw
+{% endblock %}
+
+{% block main %}
+    <h3>Please enter the code linked to your draw.</h3>
+    <br>
+    <form action="/participate" method="get"> 
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" maxlength="25" required="" name="code" placeholder="code" type="text">
+        </div>
+        <button class="btn" type="submit">Submit code</button>
+    </form>    
+{% endblock %}
